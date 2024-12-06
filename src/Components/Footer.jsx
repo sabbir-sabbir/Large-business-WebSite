@@ -48,12 +48,12 @@ const footerData = {
 const MenuSection = ({ title, menus }) => {
   return (
     <div>
-      <p className="text-semibold text-2xl border-b mb-5 py-3">{title}</p>
-      <div className="flex gap-12 text-xl">
+      <p className="text-semibold text-xl font-bold text-[#26395C] border-b mb-5 py-2">{title}</p>
+      <div className="flex gap-12 text-sm lg:text-lg text-[#656B89]">
         {menus.map((menuItem, i) => (
           <ul key={i}>
             {menuItem.items.map((item, idx) => (
-              <li className="mb-4" key={idx}>
+              <li className="mb-4 text-md  " key={idx}>
                 {item}
               </li>
             ))}
@@ -74,7 +74,7 @@ const Footer = () => {
         {/* Left side div */}
         <div className='col-span-1'>
           <img className="w-fit mb-4" src={logo} alt="Logo" />
-          <p className="text-sm mb-5">{copyRight}</p>
+          <p className="text-sm mb-5 text-[#656B89]">{copyRight}</p>
           <div className="flex space-x-4">
             {socialIcons.map((sicon, index) => (
               <a href="#" key={index}>
@@ -89,8 +89,9 @@ const Footer = () => {
           {sections.map((section, index) => (
             <MenuSection
               key={index}
-              title={section.title}
+              title={section.title }
               menus={section.menus}
+  
             />
           ))}
           
