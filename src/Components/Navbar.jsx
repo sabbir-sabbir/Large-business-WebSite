@@ -18,6 +18,8 @@ import {
 } from "@nextui-org/react";
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
+import MyModal from "./HomePage/Modal";
+import DropDownMenu from "./HomePage/DropDownMenu";
 
 const MyNavbar = () => {
   const [isMenuOpen, setisMenuOpen] = useState(false);
@@ -66,7 +68,7 @@ const MyNavbar = () => {
 
           {/* Dropdown menu */}
           <NavbarItem>
-            <Dropdown>
+          <Dropdown>
               <DropdownTrigger>
                 <Button variant="none">
                   Thing to do{" "}
@@ -111,20 +113,7 @@ const MyNavbar = () => {
           </NavbarItem>
 
           <NavbarItem>
-            <Dropdown>
-              <DropdownTrigger>
-                <Button variant="none">
-                  {" "}
-                  <UserIcon className="text-gray-500 w-4 h-4" />
-                  Account{" "}
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="profile">
-                <DropdownItem key="new">New file</DropdownItem>
-                <DropdownItem key="copy">Copy link</DropdownItem>
-                <DropdownItem key="edit">Edit file</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+          {  value === true ? <MyModal/> : <DropDownMenu/> }
           </NavbarItem>
 
           <NavbarItem>
