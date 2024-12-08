@@ -19,9 +19,10 @@ import {
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import MyModal from "./HomePage/Modal";
-import DropDownMenu from "./HomePage/DropDownMenu";
+const value = true
 
 const MyNavbar = () => {
+
   const [isMenuOpen, setisMenuOpen] = useState(false);
   const menuItems = [
     "Eat & Drinks",
@@ -113,7 +114,7 @@ const MyNavbar = () => {
           </NavbarItem>
 
           <NavbarItem>
-          {  value === true ? <MyModal/> : <DropDownMenu/> }
+            { value === true ? <MyModal/> : <DropDownMenu/> }
           </NavbarItem>
 
           <NavbarItem>

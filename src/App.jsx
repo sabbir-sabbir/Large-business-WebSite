@@ -1,4 +1,5 @@
 import './App.css'
+import {useState} from 'react'
 import Carousel from './Components/Carousel'
 import Chiilsbay from './Components/Chiilsbay'
 import Footer from './Components/Footer'
@@ -8,7 +9,10 @@ import MyNavbar from './Components/Navbar'
 import ThingsToDo from './Components/ThingsToDo'
 import ImgSection from './ImgSection'
 
+
+
 function App() {
+
 
 
   return (
