@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink} from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -55,16 +56,17 @@ const MyNavbar = () => {
         {/* for large screen */}
         <NavbarContent className="hidden sm:flex gap-4 w-full  justify-center ">
           <NavbarBrand>
-            <img className="w-44 " src="logo.png" alt="" />
+            <NavLink to="/"> <img className="w-44 " src="logo.png" alt="" /></NavLink>
+           
           </NavbarBrand>
           <NavbarItem>
-            <Link className="text-black">Eat & Drinks</Link>
+            <NavLink to="drink"  className="text-black">Eat & Drinks</NavLink>
           </NavbarItem>
           <NavbarItem>
-            <Link className="foreground">
-              Club <sup className="bg-blue-600 text-[8px]">+Hot</sup>
-              {""}
-            </Link>
+           <NavLink to="/club">  Club <sup className=" text-[10px] ">+Hot</sup>
+           {""}</NavLink>
+            
+         
           </NavbarItem>
 
           {/* Dropdown menu */}
