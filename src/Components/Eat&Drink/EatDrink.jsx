@@ -1,8 +1,13 @@
 import React from 'react'
+import DrinkHero from './DrinkHero'
+import FindPlace from './FindPlace'
 
 const EatDrink = () => {
   return (
-    <div>EatDrink</div>
+    <>
+    <DrinkHero/>
+    <FindPlace/>
+    </>
   )
 }
 

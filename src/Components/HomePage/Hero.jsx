@@ -21,7 +21,7 @@ const Hero = () => {
              </Autocomplete>
             </div>
             <div>
-            <Autocomplete labelPlacement="outside" label="Location" placeholder="Oshodi" className='w-[100%]'>
+            <Autocomplete labelPlacement="outside" label="Date" placeholder="Oshodi" className='w-[100%]'>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
@@ -31,7 +31,7 @@ const Hero = () => {
              </Autocomplete>
             </div>
             <div>
-            <Autocomplete labelPlacement="outside" label="Location" placeholder="Oshodi" className='w-[100%]'>
+            <Autocomplete labelPlacement="outside" label="Activities" placeholder="Oshodi" className='w-[100%]'>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
                 <AutocompleteItem value="Me as a Programmer" className='text-black'>Me as a Programmer</AutocompleteItem>
