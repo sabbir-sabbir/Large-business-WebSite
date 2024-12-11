@@ -169,11 +169,54 @@ const Payment = () => {
               <input type="text" placeholder='CVV' className='w-full p-2 mb-4 border rounded-lg focus:ring-blue-500 focus:border-red-500' />
               
             </div>
-          )
-
-          }
+          )}
         </div>
         
+
+
+        <div className='bg-gray-200 p-4 rounded-lg'>
+          <ul className='mb-4'>
+            {cartItem.map((item)=> (
+              <li key={item.id} className='flex justify-between mb-2'> 
+              <span>
+                {item.title}{item.quantity}
+              </span>
+              <span>₦ {item.originalPrice.toLocaleString()} </span>
+            
+              </li>
+            ))
+
+            }
+
+          </ul>
+          <hr className='my-2 ' />
+
+          <div className='flex justify-between '>
+            <span>SubTotal: </span>
+            <span>₦ {cartItem.reduce((sum, item)=> sum + item.originalPrice, 0  ).toLocaleString()}</span>
+          </div>
+
+          {/* Tax Calculation div */}
+          <div className='flex justify-between mt-2 '>
+            <span>Tax(5%): </span>
+            <span>
+            ₦{""}
+            { (cartItem.reduce((sum, item )=> sum + item.originalPrice, 0) * 0.05).toLocaleString() 
+
+            }
+            </span>
+          </div>
+          {/* Total Calculation */}
+          <hr className='my-2' />
+          <div className='flex justify-between font-bold'>
+            <span>Total Amount: </span>
+            <span>₦ {(
+              cartItem.reduce((sum, item )=> sum + item.originalPrice, 0  ) *  1.05
+            ).toLocaleString()}</span>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );
