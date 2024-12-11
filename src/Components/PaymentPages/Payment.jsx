@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { CiCircleRemove } from "react-icons/ci";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Payment = () => {
+  const [showPaymentInfo, setShowPaymentInfo] = useState(false)
   const [cartItem, setCartItem] = useState([
     {
       id: 1,
@@ -131,7 +133,46 @@ const Payment = () => {
       </div>
 
       {/* Right Side */}
-      <div>
+      <div classname='flex-1 p-6 border-1 '>
+        {/* Account info */}
+        <div className='mb-6 mt-5 mr-2'>
+          <h3 className='text-lg font-semibold mb-2 flex gap-2 text-[#26395C]'>
+          <img src="check.png" alt="" />
+            Account information</h3>
+          <div className='!ms-8 '>
+            <p className='text-[#26395C]'>Tunde Chukwu</p>
+            <p className='text-[#26395C]'>tundechukwu12@gmail.com</p>
+          </div>
+        </div>
+          {/* Phone info */}
+          <div className='mb-6 mt-5 mr-2'>
+          <h3 className='text-lg font-semibold mb-2 flex gap-2'>
+          <img src="check.png" alt="" />
+            Phone Number</h3>
+          <div className='!ms-8 '>
+            <p className='text-[#26395C]'>+2341123465799</p>
+          </div>
+        </div>
+
+        {/* Payment field with toggler */}
+        <div>
+          <h3 className='flex text-lg font-semibold mb-2 cursor-pointer  gap-2 text-[#26395C] mt-5 mr-2' onClick={()=> setShowPaymentInfo(!showPaymentInfo)}>
+          <img src="check.png" alt="" />
+          <span>Payment Information</span>
+          <span><IoIosArrowDown /></span>
+          </h3>
+          {showPaymentInfo && (
+            <div className='grid grid-cols-2 lg:grid-cols-2 gap-4 mt-5 mr-2'>
+              <input type="number" placeholder='card number' className='w-full p-2 mb-4 border rounded-lg focus:ring-blue-500 focus:border-red-500' />
+              <input type="text" placeholder='card holder name' className='w-full p-2 mb-4 border rounded-lg focus:ring-blue-500 focus:border-red-500' />
+              <input type="date" placeholder='Exp: date' className='w-full p-2 mb-4 border rounded-lg focus:ring-blue-500 focus:border-red-500' />
+              <input type="text" placeholder='CVV' className='w-full p-2 mb-4 border rounded-lg focus:ring-blue-500 focus:border-red-500' />
+              
+            </div>
+          )
+
+          }
+        </div>
         
       </div>
     </section>
