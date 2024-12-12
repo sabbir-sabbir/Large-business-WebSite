@@ -1,5 +1,6 @@
 import './App.css'
 import Club from './Components/Club/Club'
+import Contact from './Components/ContactPage/Contact'
 import EatDrink from './Components/Eat&Drink/EatDrink'
 import Footer from './Components/Footer'
 import HomePage from './Components/HomePage'
@@ -23,6 +24,7 @@ function App() {
           <Route path='/drink' element={ <EatDrink/>} />
           <Route path='/club' element={ <Club/>} />
           <Route path='/card' element={ <Payment/>} />
+          <Route path='/contact' element={ <Contact/>} />
          </Routes>
      <Footer/>
   </Router>

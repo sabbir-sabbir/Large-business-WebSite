@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -53,10 +53,11 @@ const MyNavbar = () => {
             <img className="w-44 " src="logo.png" alt="" />
           </NavbarBrand>
         </NavbarContent>
+
         {/* for large screen */}
         <NavbarContent className="hidden sm:flex gap-4 w-full  justify-center ">
           <NavbarBrand>
-            <NavLink to="/"> <img className="w-44 " src="logo.png" alt="" /></NavLink>
+            <NavLink to="/"> <img className="w-44 " src="logo.png" alt="" /> </NavLink>
            
           </NavbarBrand>
           <NavbarItem>
@@ -114,13 +115,16 @@ const MyNavbar = () => {
               </svg>
             </NavLink>
           </NavbarItem>
-
           <NavbarItem>
             { value === true ? <MyModal/> : <DropDownMenu/> }
           </NavbarItem>
 
           <NavbarItem>
+            
+            <Navlink to="/contact">
             <Button color="primary">Contact now</Button>
+            </Navlink>
+           
           </NavbarItem>
         </NavbarContent>
 
