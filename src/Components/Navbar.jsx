@@ -120,10 +120,10 @@ const MyNavbar = () => {
           </NavbarItem>
 
           <NavbarItem>
-            
-            <Navlink to="/contact">
-            <Button color="primary">Contact now</Button>
-            </Navlink>
+
+            <NavLink to="/contact">
+            <button  className='bg-blue-600 p-3 rounded-xl text-white font-semibold '>Contact now</button>
+            </NavLink>
            
           </NavbarItem>
         </NavbarContent>
