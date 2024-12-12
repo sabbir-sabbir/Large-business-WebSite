@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CiCircleRemove } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
+import PayModal from "./PayModal";
 
 const Payment = () => {
   const [showPaymentInfo, setShowPaymentInfo] = useState(false)
@@ -174,7 +175,7 @@ const Payment = () => {
         
 
 
-        <div className='bg-gray-200 p-4 rounded-lg'>
+        <div className='bg-gray-200 p-4 rounded-lg mr-3'>
           <ul className='mb-4'>
             {cartItem.map((item)=> (
               <li key={item.id} className='flex justify-between mb-2'> 
@@ -213,10 +214,10 @@ const Payment = () => {
             <span>₦ {(
               cartItem.reduce((sum, item )=> sum + item.originalPrice, 0  ) *  1.05
             ).toLocaleString()}</span>
-
           </div>
-
+          <PayModal/>
         </div>
+
       </div>
     </section>
   );
