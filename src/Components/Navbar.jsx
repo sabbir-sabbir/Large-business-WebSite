@@ -122,7 +122,7 @@ const MyNavbar = () => {
           <NavbarItem>
 
             <NavLink to="/contact">
-            <button  className='bg-blue-600 p-3 rounded-xl text-white font-semibold '>Contact now</button>
+            <button  className='bg-blue-600 p-2 px-3 rounded-md  text-white font-medium '>Contact now</button>
             </NavLink>
            
           </NavbarItem>
