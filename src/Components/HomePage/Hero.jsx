@@ -3,7 +3,7 @@ import {Autocomplete, AutocompleteItem, Button} from "@nextui-org/react";
 
 const Hero = () => {
   return (
-    <section className="bg-[url('hero1.png')] w-full h-[80vh] bg-no-repeat bg-cover  mt-4 overflow-hidden">
+    <section className="bg-[url('hero1.webp')] w-full h-[80vh] bg-no-repeat bg-cover  mt-4 overflow-hidden">
       <div className="container w-[80%] mx-auto">
         <h1 className=" text-xl lg:text-5xl w-full lg:w-[60%] font-bold py-3 lg:py-10 px-10 mt-[8px] lg:mt-[30px] text-white leading-tight">
           Find amazing things to do anytime, anywhere in Lagos.
